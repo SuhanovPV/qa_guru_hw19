@@ -36,9 +36,9 @@ def set_android_options():
 
 def set_ios_options():
     options = XCUITestOptions().load_capabilities({
+        "deviceName": "iPhone 11 Pro",
         "platformName": "ios",
-        "platformVersion": "15",
-        "deviceName": "iPhone XS",
+        "platformVersion": "13",
         "app": config.app,
         "bstack:options": {
             "sessionName": "BStack first_test",
