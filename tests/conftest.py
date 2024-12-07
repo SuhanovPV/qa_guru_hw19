@@ -25,6 +25,7 @@ def set_android_options():
         'deviceName': 'Google Pixel 3',
         "app": config.app,
         'bstack:options': {
+            "sessionName": "BStack first_test",
             "projectName": config.project,
             "userName": config.bstack_username,
             "accessKey": config.bstack_accesskey
@@ -40,6 +41,7 @@ def set_ios_options():
         "deviceName": "iPhone XS",
         "app": config.app,
         "bstack:options": {
+            "sessionName": "BStack first_test",
             "projectName": config.project,
             "userName": config.bstack_username,
             "accessKey": config.bstack_accesskey
@@ -57,6 +59,7 @@ def mobile_settings(request):
         options = set_ios_options()
     else:
         return
+
     with allure.step('init app session'):
         browser.config.driver = webdriver.Remote(
             'http://hub.browserstack.com/wd/hub',
