@@ -26,7 +26,7 @@ def video(session_id):
     ).json()
     video_url = bstack_session['automation_session']['video_url']
     allure.attach(
-        '<html><body><video width="100" height="100%" controls autoplay>'
+        '<html><body><video width="100%" height="100%" controls autoplay>'
         f'<source src={video_url} type="video/mp4">'
         '</video></body></html>',
         name='video_rec',
